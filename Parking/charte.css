@@ -1,0 +1,216 @@
+header{
+    background-image:linear-gradient(130deg, white, grey); 
+    display: flex;
+    height: 200px;
+    min-width: 200px;
+    align-items: center;
+    color: #fff;
+}
+
+h1  {
+    color: orangered;
+    text-align: center;
+    font-family: Arial Narrow, sans-serif	;
+    font-size: 35px;
+    font-weight:500;
+    margin: 20px;
+}
+
+h12 {
+    color:cadetblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 27px;
+    font-weight: 200;
+    margin: 20px;
+}
+
+h2  {
+    color:grey;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight:300;
+    margin: 20px;
+}
+
+h3  {
+    color:darkslateblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+    margin: 20px;
+}
+
+h4  {
+    color:steelblue;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+    margin: 20px;
+}
+
+h5  {
+    color:cadetblue;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+    margin: 20px;
+}
+
+img {
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+    align-content: center;
+}
+
+
+ul.a {
+  list-style-type: square;
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+}
+
+li1 {
+  float: left;
+}
+
+li1 {
+  display: block;
+  color: gray;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight:600;
+}
+
+li1 :hover:not(.active) {
+  background-color: floralwhite;
+}
+
+li1 :before {
+	content: "→ ";
+}
+
+
+body {
+    font-family: sans-serif;
+    color:black;
+}
+
+article {
+    background-color: #C3E6FD;
+    border-radius: 10px;
+    padding: 12.5px;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+
+section {
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 20px;
+    width:900px;
+    height: 330px;
+    box-shadow: 10px 10px 5px darkblue;
+    float: left;
+}
+
+aside {
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 20px;
+    width:auto;
+    height: auto;
+    box-shadow: 10px 10px 5px darkblue;
+    float: right;
+}
+
+ap {
+    font-style: italic;
+}
+
+gr {
+    font-weight: bold;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:focus {
+  border-bottom: 1px solid red;
+  background: floralwhite ;
+}
+
+a:hover {   
+  background: grey;
+}
+
+a:active {
+  background: grey;
+  color: blueviolet;
+}
+
+#arrondie {
+    border-radius:100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    color:black;
+    font-size: medium;
+    align-content: center;
+}
+
+/* Bordure simple autour des tableaux */
+table,th, td { 
+    border: 1px solid grey;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+/* Centrage tableau */
+table.centre{ 
+    margin:auto;
+}
+
+/* centrage du texte dans les cellules du tableau */
+table.centre td{
+    text-align:center;
+}
+
+table#jolie tr:first-child{
+background:#768FD8;
+}
+
+table#jolie tr:nth-child(2n){
+background:white;
+}
+
+table#jolie tr:nth-child(2n+3){
+background:#BDCAED;
+}
+
+/* si un tableau a une seule ligne on l'affiche en rouge */
+table tr:only-child{
+background:red;
+}
+

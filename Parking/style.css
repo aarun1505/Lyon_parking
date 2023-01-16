@@ -1,0 +1,443 @@
+/* Style du header */
+
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("header.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/*Style des boutons*/
+
+  button,
+      button::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      button {
+        background: none;
+        border: 4px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 10px auto;
+        padding: 2em 6em;
+        position: relative;
+        text-transform: uppercase;
+      }
+      button::before,
+      button::after {
+        background: #fff;
+        content: "";
+        position: absolute;
+        z-index: -1;
+      }
+      button:hover {
+        color: #654ea3;
+      }
+	  
+	  .button3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+      }
+      .button3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+
+
+/*Style des tableaux*/
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+
+}
+
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(to right, #f8f9fa, #f8f9fa);
+}
+
+
+}
+
+
+th {
+    background-color: #343a40;
+	color: #fff;
+}
+
+
+/* Style du texte */
+
+
+
+body {
+  background: #28a745;
+  background: -webkit-linear-gradient(to right, #28a745, #654ea3);
+  background: linear-gradient(to right, #28a745, #654ea3);
+  min-height: 100vh;
+}
+
+code {
+  color: #745eb1;
+  background: #fff;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.text-uppercase {
+  letter-spacing: 0.08em;
+}
+
+footer {
+	background: #343a40;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.logo_fac {
+	position: absolute;
+	height: 125;
+	width: 400px;
+	align: left;
+	bottom: -10%;
+}
+
+
+
+/*Style du formulaire modification base */
+
+form {
+width: 500px;
+margin: 5%;
+border: 2px solid rgb(200, 200, 200);
+display: flex;
+padding: 15px;
+}
+input {
+padding: 4px 10px;
+border: 1px;
+font-size: 16px;
+}
+.search {
+width: 50%;
+border: 1px;
+}
+.submit {
+width: 50%;
+background-color: #eaafc8;
+color: #ffffff;
+}
+
+
+
+.custom-banner-image {
+
+background-image: url("images/bannière lyon.jpg");
+background-repeat: no-repeat;
+
+background-size: cover;
+
+background-position: 45% 55%;
+
+position: relative;
+
+width: 100%;
+
+height: auto;
+
+display: block;
+
+}
+
+.custom-banner-image .banner-overlay {
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.custom-banner-image .banner-text {
+
+padding: 50px 0;
+
+color: #eee;
+
+text-align: center;
+
+position: relative;
+
+z-index: 1;
+
+width: 100%;
+
+font-family: sans-serif;
+
+}
+
+.custom-banner-image .banner-text{
+
+color: #fff;
+
+}
+
+@media (max-width: 767px){
+
+.header-container.container-fluid .row-fluid .page-center {
+
+padding: 0;
+
+}
+
+.custom-banner-image .banner-text {
+
+padding: 50px 15px;
+
+}
+
+
+
+
+
+#chatsend{
+	margin: 10px;
+}
+
+
+
+.chatbot-container {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.chat-bubble {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.chat-bubble-bot {
+    text-align: right;
+}
+
+#hidden-text {
+    display: none;
+}
+
+.chat-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+/*
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* Center body contents, both horizontally and vertically */
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Style the outer container. Centralize contents, both horizontally and vertically */
+#bot {
+  margin: 50px 0;
+  height: 700px;
+  width: 450px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2) ;
+  border-radius: 20px;
+}
+
+/* Make container slightly rounded. Set height and width to 90 percent of .bots' */
+#container {
+  height: 90%;
+  border-radius: 6px;
+  width: 90%;
+  background: #F3F4F6;
+}
+
+/* Style header section */
+#header {
+  width: 100%;
+  height: 10%;
+  border-radius: 6px;
+  background: #3B82F6;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style body */
+#body {
+  width: 100%;
+  height: 75%;
+  background-color: #F3F4F6;
+  overflow-y: auto;
+}
+
+/* Style container for user messages */
+.userSection {
+  width: 100%;
+}
+
+/* Seperates user message from bot reply */
+.seperator {
+  width: 100%;
+  height: 50px;
+}
+
+/* General styling for all messages */
+.messages {
+  max-width: 60%;
+  margin: .5rem;
+  font-size: 1.2rem;
+  padding: .5rem;
+  border-radius: 7px;
+}
+
+/* Targeted styling for just user messages */
+.user-message {
+  margin-top: 1rem;
+  text-align: left;
+  background: #3B82F6;
+  color: white;
+  float: left;
+}
+
+/* Targeted styling for just bot messages */
+.bot-reply {
+  text-align: right;
+  background: #E5E7EB;
+  margin-top: 1rem;
+  float: right;
+  color: black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input area */
+#inputArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  padding: 1rem;
+  background: transparent;
+}
+
+/* Style the text input */
+#userInput {
+  height: 20px;
+  width: 80%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style send button */
+#send {
+  height: 50px;
+  padding: .5rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 20%;
+  color: white;
+  background: #3B82F6;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}

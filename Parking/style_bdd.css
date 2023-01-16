@@ -1,0 +1,273 @@
+/* Style du header */
+
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("header.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/*Style des boutons*/
+
+  button,
+      button::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      button {
+        background: none;
+        border: 4px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 10px auto;
+        padding: 2em 6em;
+        position: relative;
+        text-transform: uppercase;
+      }
+      button::before,
+      button::after {
+        background: #fff;
+        content: "";
+        position: absolute;
+        z-index: -1;
+      }
+      button:hover {
+        color: #654ea3;
+      }
+	  
+	  .button3::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+      }
+      .button3:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+
+
+/*Style des tableaux*/
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+	overflow: scroll;
+	height: 40%;
+	
+}
+
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+	background-color: #343a40;
+	color: white;
+	text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(to right, #f8f9fa, #f8f9fa);
+}
+
+tr:nth-child(odd) {
+    background: linear-gradient(to right, #d8d9da, #d8d9da);
+}
+
+
+
+
+
+
+
+/* Style du texte */
+
+
+
+body {
+  background: #28a745;
+  background: -webkit-linear-gradient(to right, #28a745, #654ea3);
+  background: linear-gradient(to right, #28a745, #654ea3);
+  min-height: 100vh;
+}
+
+code {
+  color: #745eb1;
+  background: #fff;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.text-uppercase {
+  letter-spacing: 0.08em;
+}
+
+footer {
+	background: #343a40;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.logo_fac {
+	position: absolute;
+	height: 125;
+	width: 400px;
+	align: left;
+	bottom: -10%;
+}
+
+
+
+/*Style du formulaire modification base */
+
+form {
+width: 500px;
+margin: 5%;
+border: 2px solid rgb(200, 200, 200);
+display: flex;
+padding: 15px;
+}
+input {
+padding: 4px 10px;
+border: 1px;
+font-size: 16px;
+}
+.search {
+width: 50%;
+border: 1px;
+}
+.submit {
+width: 50%;
+background-color: #eaafc8;
+color: #ffffff;
+}
+
+
+
+.custom-banner-image {
+
+background-image: url("images/bannière lyon.jpg");
+background-repeat: no-repeat;
+
+background-size: cover;
+
+background-position: 45% 55%;
+
+position: relative;
+
+width: 100%;
+
+height: auto;
+
+display: block;
+
+}
+
+.custom-banner-image .banner-overlay {
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.custom-banner-image .banner-text {
+
+padding: 50px 0;
+
+color: #eee;
+
+text-align: center;
+
+position: relative;
+
+z-index: 1;
+
+width: 100%;
+
+font-family: sans-serif;
+
+}
+
+.custom-banner-image .banner-text{
+
+color: #fff;
+
+}
+
+@media (max-width: 767px){
+
+.header-container.container-fluid .row-fluid .page-center {
+
+padding: 0;
+
+}
+
+.custom-banner-image .banner-text {
+
+padding: 50px 15px;
+
+}
+
+}
+
+

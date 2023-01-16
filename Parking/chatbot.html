@@ -1,0 +1,291 @@
+<!-- Navbar-->
+<html lang="fr">
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Parking Lyon</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dialogflow-fulfillment@0.5.0/dist/dialogflow-fulfillment.min.js"></script>
+ </head>
+ <body>
+ 
+<div class="custom-banner-image ">
+
+	<div class="banner-overlay"></div>
+
+		<div class="banner-text">
+
+			<div class="page-center">
+
+				<div>
+				</br>
+				</br>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+  
+ 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
+	<a class="navbar-brand font-weight-bold text-uppercase" href="accueil.php">Accueil</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+		
+	<a class="navbar-brand font-weight text" href="bdd.php">Voir la base de données</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+		
+
+</nav>
+
+
+<!-- For demo purpose -->
+<section class="py-5 text-white">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+		<img class= "img-fluid" src="images/Ville de Lyon.jpg" height="100" width="200" align="center" />
+		</br>
+		</br>
+		</br>
+        <h5><code>Parking Lyon</code> est un site où vous pourrez trouver tous les parkings de Lyon disponible en temps réel. </h5>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+		</br>
+        <h5>Voici la carte de Lyon avec ses parkings :</h5>
+        
+      </div>
+    </div>
+	
+  </div>
+</section>
+
+
+<center>
+
+	<table>
+		<caption>Base de données Parking</caption>
+		<tr class="py-5 text-white">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71632.78177045826!2d4.797087122328072!3d45.75694972396297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sen!2sfr!4v1673121542762!5m2!1sen!2sfr" 
+			width="600" height="450" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</tr>
+	</table>
+</center>
+
+<div class="chatbot-container">
+        <div class="chat-bubble chat-bubble-bot">
+            <button id="toggle-text" class="chat-center">BONJOUR !</button>
+            <div id="hidden-text" style="display: none;">
+                <div id="chatlog"></div>
+				<center>
+				<form action = "accueil.php" method = "get">
+					<input type="text" id="chatinputparking" name="nom" class="search" placeholder="Quel parking ?"></input>
+					<input type="text" id="chatinputquestion" name="capacite" class="search" placeholder="Entrez votre question ici"></input>
+					<input type="submit" id="chatsend" name="submit" class="envoyer" value="Envoyer">
+				</form>
+				</center>
+              </div>
+        </div>
+</div>
+ 
+<script type="text/javascript"> 
+	document.getElementById("toggle-text").addEventListener("click", function(){
+					var x = document.getElementById("hidden-text");
+					if (x.style.display === "none") {
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+					}
+				});
+ </script>
+ 
+<center>
+
+	<table>
+		<caption class="py-3 text-white">Base de données Parking</caption>
+		<tr>
+				<th scope="col">Nom</th>
+				<th scope="col">Commune</th>
+				<th scope="col">Capacité</th>
+				<th scope="col">Capacité 2 roues</th>
+				<th scope="col">Capacité Vélo</th>
+				<th scope="col">Usage</th>
+				<th scope="col">Vocation</th>
+				<th scope="col">Réglementation</th>
+				<th scope="col">Fermeture</th>
+		</tr>
+		<tr>
+				 <td>[nom.val;block=tr]</td>
+				 <td>[commune.val;block=tr]</td>
+				 <td>[capacite.val;block=tr]</td>
+				 <td>[capacite2rm.val;block=tr]</td>
+				 <td>[capacitevelo.val;block=tr]</td>
+				 <td>[usage.val;block=tr]</td>
+				 <td>[vocation.val;block=tr]</td>
+				 <td>[reglementation.val;block=tr]</td>
+				 <td>[fermeture.val;block=tr]</td>
+		</tr>
+	</table>
+</center>
+
+<!-- <script type="text/javascript">
+
+       
+
+        var inputFieldParking = document.getElementById("chatinputparking");
+        var inputFieldQuestion = document.getElementById("chatinputquestion");
+        var sendButton = document.getElementById("chatsend");
+        var chatlogParking = document.getElementById("chatlog");
+        var chatlogQuestion = document.getElementById("chatlog");
+        
+        var responses = { // responses valides du chatbot
+        "combien de places sont disponibles": function() {
+            return getAvailability();
+        },
+        "est-ce que le parking est ouvert": function() {
+            return getOpenStatus();
+        },
+        "combien coûte une place pour une journée": function() {
+            return getDailyRate();
+        },
+        "exemple de question": function() {
+            return getQuestionExemple();
+        }
+        };
+        
+        document.getElementById("toggle-text").addEventListener("click", function(){
+            var x = document.getElementById("hidden-text");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        });
+
+        // Example function to get the number of available spots
+        function getAvailability() {
+            var availability = getCurrentAvailability(); // function to get the current availability from your data source
+            return "Il y a actuellement " + availability + " places disponibles.";
+        }
+
+        function getCurrentAvailability() {
+        // Load the CSV file using the Fetch API
+            fetch("parking.csv")
+                .then(response => inputParking.text())
+                .then(data => {
+                // Parse the CSV data
+                var availability = 0;
+                var rows = data.split("\n");
+                rows.forEach(function(row) {
+                    var columns = row.split(",");
+                    if (columns[17] === "Available") {
+                    availability++;
+                    }
+                });
+                return availability;
+            });
+        }
+
+        // Example function to check if the parking is open
+        function getOpenStatus() {
+            fetch('parking.csv')
+            .then(response => inputParking.text())
+            .then(data => {
+                var rows = data.split('\n');
+                var status = rows[response].split(',')[1]
+                if (status == "True") {
+                    return "Oui, le parking est actuellement ouvert.";
+                } else {
+                    return "Non, le parking est actuellement fermé.";
+            }
+            });
+        }
+
+        function getDailyRate() {
+            response = ""
+            fetch('parking.csv')
+            .then(response => inputParking.text())
+            .then(data => {
+                var rows = data.split('\n')
+                var rate = rows[response].split(',')[2]
+                return "Le tarif journalier est de " + rate + "€.";
+            });
+        }
+
+        function getQuestionExemple() {
+            var responseProperties = Object.keys(responses);
+            for (var i = 0; i < responseProperties.length; i++) {
+                console.log(responseProperties[i]);
+            }
+            return "Questions types : " + responseProperties ;
+        }
+
+
+        function handleInput(input) {
+            for (var key in responses) {
+                if (input.toLowerCase().indexOf(key) !== -1) {
+                return responses[key]();
+                }
+            }
+            return "Désolé, je n'ai pas compris votre question. Pouvez-vous reformuler s'il vous plaît? \n " + getQuestionExemple();;
+        }
+      
+        
+        sendButton.addEventListener("click", function() {
+            var inputQuestion = inputFieldQuestion.value;
+            chatlogQuestion.innerHTML += "<div class='user'>" + inputQuestion + "</div>";
+            
+            var inputParking = inputFieldParking.value;
+            chatlogParking.innerHTML += "<div class='user'>" + inputParking + "</div>";
+            
+            var responseQuestion = handleInput(inputQuestion);
+            chatlogQuestion.innerHTML += "<div class='bot'>" + responseQuestion + "</div>";            
+            
+            inputFieldQuestion.value = "";
+            inputFieldParking.value = "";
+        });
+        
+    </script> -->
+
+<!--Ligne de séparation -->
+
+
+<footer>
+<section class="py-3 text-white">
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			
+				<img class= "logo_fac" src="images/icom.png" />
+			
+		</div>
+		<div class="col-md-6" align="left">
+			<p align="center">Crédits :</p>
+			<p align="center"> Thomas CAYRAT, Albane NICOULLAUD, Arun ANTONY RAJAN <br/>  
+					  Étudiants MASTER INFO <br/>
+				Site réalisé dans le cadre du cours d'Initiation à la Recherche</p>
+		</div>
+	</div>
+</div>
+	
+</footer>  
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</section>
+ </body>
+</html> 
+
+
