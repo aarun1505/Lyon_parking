@@ -16,9 +16,7 @@ Depuis cette page vous avez accès à la barre de recherche ainsi qu'à la base 
 
 
 ## Contributeurs
-Arun Antony-Rajan
-Thomas Cayrat
-Albane Nicoullaud
+Arun Antony-Rajan, Thomas Cayrat, Albane Nicoullaud
 
 ## Référent
 Omar Boussaid
