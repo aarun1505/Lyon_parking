@@ -11,6 +11,8 @@ Pour les perspectives du projet, nous voudrions améliorer la barre de recherche
 
 ## Prise en main
 Nécessite Apache et Mysql.
+Nécessite la création de la base de données dans phpMySQL à l'aide du fichier parking.sql.
+Ne pas oublier de modifier le login et le mdp (et peut-être le nom de la base aussi) dans le fichier connect.inc.php.
 Lancer le fichier accueil.php en local, vous arriverez directement sur la page d'accueil du site.
 Depuis cette page vous avez accès à la barre de recherche ainsi qu'à la base de données utilisée.
 
